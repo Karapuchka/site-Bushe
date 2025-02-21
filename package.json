@@ -1,0 +1,27 @@
+{
+  "name": "site-Bushe",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "hbs": "^4.2.0",
+    "mobile-detect": "^1.4.5",
+    "mysql2": "^3.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karapuchka/site-Bushe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karapuchka/site-Bushe/issues"
+  },
+  "homepage": "https://github.com/Karapuchka/site-Bushe#readme"
+}
