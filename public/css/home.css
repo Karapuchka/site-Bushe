@@ -1,0 +1,8 @@
+.header{
+    width: 99vw;
+    min-height: 99dvh;
+}
+
+.header--bg{
+    background: url('/img/home/home.jpg') no-repeat center center / cover;
+}

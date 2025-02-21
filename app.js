@@ -25,6 +25,10 @@ const JSONParser = express.json();
 app.use(express.static(path.join(fs.realpathSync('.') + '/public')));
 app.set('view engine', 'hbs');
 
+app.get('/', (_, res)=>{
+    res.render('index.hbs');
+});
+
 app.listen(3000, ()=>{
     return console.log('Server ative. URL: http://localhost:3000/');
 });
