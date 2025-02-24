@@ -12,56 +12,108 @@
 
         <hedaer class="header header--bg">
 
-            <div class="container-big header--container">
+            <div class="header-top">
+                <div class="container-big header--container">
 
-                <div class="logo">буше</div>
+                    <div class="logo">буше</div>
 
-                <ul class="menu-list">
-                    <li class="menu-list__item"><a href="/">главная</a></li>
-                    <li class="menu-list__item"><a href="/product">продукция</a></li>
-                    <li class="menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
-                    <li class="menu-list__item"><a href="/company">о компании</a></li>
-                    <li class="menu-list__item"><a href="/jobOperings">вакансии</a></li>
-                </ul>
+                    <ul class="menu-list">
+                        <li class="menu-list__item"><a href="/">главная</a></li>
+                        <li class="menu-list__item"><a href="/product">продукция</a></li>
+                        <li class="menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
+                        <li class="menu-list__item"><a href="/company">о компании</a></li>
+                        <li class="menu-list__item"><a href="/jobOperings">вакансии</a></li>
+                    </ul>
 
-                <div class="setting">
-                    <div class="setting__search">
-                        <input class="setting__search__input" type="text">
-                        <button class="setting__search__btn" id="js-search-btn" type="button"></button>
-                    </div>
+                    <div class="setting">
+                        <div class="setting__search">
+                            <input class="setting__search__input" type="text">
+                            <button class="setting__search__btn" id="js-search-btn" type="button"></button>
+                        </div>
 
-                     <!-- Выпадающее окно -->
-                     <ul class="search-list">
-                        {{#each search-list}}
-                            <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
-                        {{/each}}
-                     </ul>
-
-                    <a href="/profile" class="setting__icon"><img src="/img/header/profile.svg" class="setting__icon__img"></a>
-                    
-                    <div class="setting__icon" id="js-basket-btn"><img src="/img/header/basket.svg" class="setting__icon__img"></div>
-
-                    <!-- Выпадающее окно -->
-                    <div class="setting__basket">
-                        <h3 class="setting__basket__title">корзина</h3>
-                        <ul class="setting__basket__list">
-                            <li class="setting__basket__list__item">список пусть</li>
+                        <!-- Выпадающее окно -->
+                        <ul class="search-list" data-active="false">
+                            {{#each search-list}}
+                                <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
+                            {{/each}}
                         </ul>
-                        <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+
+                        <a href="/profile" class="setting__icon"><img src="/img/header/profile.svg" class="setting__icon__img"></a>
+                        
+                        <div class="setting__icon"><img src="/img/header/basket.svg" class="setting__icon__img"></div>
+
+                        <!-- Выпадающее окно -->
+                        <div class="setting__basket" data-active="false">
+                            <h3 class="setting__basket__title">корзина</h3>
+                            <ul class="setting__basket__list">
+                                <li class="setting__basket__list__item">список пусть</li>
+                            </ul>
+                            <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+                        </div>
+
+                        <div class="language">
+                            <div class="language__ru" id="js-language-ru">РУС</div>
+                            <div class="language__eng" id="js-language-eng">ENG</div>
+                        </div>
+
                     </div>
 
-                    <div class="language">
-                        <div class="language__ru" id="js-language-ru">РУС</div>
-                        <div class="language__eng" id="js-language-eng">ENG</div>
+                    <div class="menu-burger">
+
+                        <ul class="menu-list menu-burger__menu-list">
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/">главная</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/product">продукция</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/company">о компании</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/jobOperings">вакансии</a></li>
+                        </ul>
+
+                        <div class="setting menu-burger__setting">
+                            <div class="setting__search">
+                                <input class="setting__search__input menu-burger__setting__search__input" type="text">
+                                <button class="setting__search__btn setting__search__btn--white" id="js-search-btn" type="button"></button>
+                            </div>
+
+                            <!-- Выпадающее окно -->
+                            <ul class="search-list" data-active="false">
+                                {{#each search-list}}
+                                    <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
+                                {{/each}}
+                            </ul>
+
+                            <a href="/profile" class="setting__icon"><img src="/img/header/profile-white.svg" class="setting__icon__img"></a>
+                            
+                            <div class="setting__icon" id="js-basket-btn"><img src="/img/header/basket-white.svg" class="setting__icon__img"></div>
+
+                            <!-- Выпадающее окно -->
+                            <div class="setting__basket" data-active="false">
+                                <h3 class="setting__basket__title">корзина</h3>
+                                <ul class="setting__basket__list">
+                                    <li class="setting__basket__list__item">список пусть</li>
+                                </ul>
+                                <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+                            </div>
+
+                            <div class="language">
+                                <div class="language__ru menu-burger-language__ru" id="js-language-ru">РУС</div>
+                                <div class="language__eng menu-burger-language__eng" id="js-language-eng">ENG</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-burget-btns" data-active="false" id="js-burger-btns">
+                        <hr class="menu-burget-btns__btn">
+                        <hr class="menu-burget-btns__btn">
+                        <hr class="menu-burget-btns__btn">
                     </div>
 
                 </div>
-
             </div>
 
-            <div class="container-big">
-                <p class="header-offer-text header-offer-text--big">Открытие новой торговой точки</p>
-                <div class="header-offer-text"><span>Подробнее</span> <img src="/img/header/arrow.svg"></div>
+            <div class="container-big home-offer">
+                <p class="home-offer__text home-offer__text--big">Открытие новой торговой точки</p>
+                <div class="home-offer__text" id="js-offer-link"><span>Подробнее</span> <img src="/img/header/arrow.svg"></div>
             </div>
 
         </hedaer>
@@ -76,7 +128,8 @@
                     <div class="slider">
                         <div class="slider__line">
                             {{#each slider-salve}}
-                                <a class="slider__line__item">
+                                <a class="slider__line__item" href="/product">
+                                    <img src="{{this.icon}}" class="slider__line__item__icon">
                                     <div class="slider__line__item__content">
                                         <span class="slider__line__item__content__text slider__line__item__content__text--big">{{this.sale}}</span>
                                         <span class="slider__line__item__content__text">{{this.title}}</span>
@@ -86,7 +139,8 @@
                         </div>
                          <div class="slider__line">
                             {{#each slider-news}}
-                                <a class="slider__line__item">
+                                <a class="slider__line__item" href="/product">
+                                    <img src="{{this.icon}}" class="slider__line__item__icon">
                                     <div class="slider__line__item__content">
                                         <span class="slider__line__item__content__text slider__line__item__content__text--big">{{this.sale}}</span>
                                         <span class="slider__line__item__content__text">{{this.title}}</span>
@@ -98,17 +152,17 @@
                 </div>
             </section>
 
-            <section class="projects">
+            <section class="projects bg-dark">
                 <div class="container-small">
                     <h2 class="projects__title">наши проекты</h2>
                     <ul class="projects__list">
-                        <li class="projetcs__list__item">
+                        <li class="projetcs__list__item" id="projetcs__list__item--bread">
                             <a href="/404" class="projects__list__item__text">тёплого хлеба</a>
                         </li>
-                        <li class="projetcs__list__item">
+                        <li class="projetcs__list__item" id="projetcs__list__item--coffee">
                             <a href="/404" class="projects__list__item__text">кофевинолаб</a>
                         </li>
-                        <li class="projetcs__list__item">
+                        <li class="projetcs__list__item" id="projetcs__list__item--band">
                             <a href="/404" class="projects__list__item__text">bebanda agency</a>
                         </li>
                     </ul>
@@ -121,24 +175,24 @@
 
                     <ul class="info__list">
                         <li class="info__list__item">
-                            <p class="info__list__item"><span class="info__list__item__color-y">8</span> <span class="info__list__item__size-24">тысяч</span></p>
-                            <p class="info__list__item">чашек кофе делают наши бариста в день</p>
+                            <p class="info__list__item__text"><span class="info__list__item__color-y">8</span> <span class="info__list__item__size-24">тысяч</span></p>
+                            <p class="info__list__item__text">чашек кофе делают наши бариста в день</p>
                         </li>
                         <li class="info__list__item">
-                            <p class="info__list__item"><span class="info__list__item__color-y">3</span> <span class="info__list__item__size-24">тысячи</span></p>
-                            <p class="info__list__item">вензелей продано за день</p>
+                            <p class="info__list__item__text"><span class="info__list__item__color-y">3</span> <span class="info__list__item__size-24">тысячи</span></p>
+                            <p class="info__list__item__text">вензелей продано за день</p>
                         </li>
                         <li class="info__list__item">
-                            <p class="info__list__item"><span class="info__list__item__color-y">1</span> <span class="info__list__item__size-24">миллион</span></p>
-                            <p class="info__list__item">вензелей с малиной встречаются с нашими гостями в год</p>
+                            <p class="info__list__item__text"><span class="info__list__item__color-y">1</span> <span class="info__list__item__size-24">миллион</span></p>
+                            <p class="info__list__item__text">вензелей с малиной встречаются с нашими гостями в год</p>
                         </li>
                         <li class="info__list__item">
-                            <p class="info__list__item"><span class="info__list__item__color-y">70+</span> <span class="info__list__item__size-24">точек</span></p>
-                            <p class="info__list__item">в Санкт-Петербурге и Москве</p>
+                            <p class="info__list__item__text"><span class="info__list__item__color-y">70+</span> <span class="info__list__item__size-24">точек</span></p>
+                            <p class="info__list__item__text">в Санкт-Петербурге и Москве</p>
                         </li>
                         <li class="info__list__item">
-                            <p class="info__list__item"><span class="info__list__item__color-y">25</span> <span class="info__list__item__size-24">лет</span></p>
-                            <p class="info__list__item">мы радуем нашей продукцией гостей</p>
+                            <p class="info__list__item__text"><span class="info__list__item__color-y">25</span> <span class="info__list__item__size-24">лет</span></p>
+                            <p class="info__list__item__text">мы радуем нашей продукцией гостей</p>
                         </li>
                     </ul>
 
@@ -161,26 +215,30 @@
 
             </section>
 
-            <section class="address">
+            <section class="address bg-dark">
 
-                <div class="container-small">
+                <div class="address-container">
 
                     <h2 class="address__title">адреса и контакты</h2>
                 
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6e7ae12607ca4edc86516bb859642faaa556132412261479e277140eac2ce77&amp;source=constructor" width="800" height="500" frameborder="0"></iframe>
+                    <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6e7ae12607ca4edc86516bb859642faaa556132412261479e277140eac2ce77&amp;source=constructor" width="800" height="500" frameborder="0"></iframe>
                     
                     <div class="address__contact">
-                        <div class="address__contact__item">Номер телефона: <a href="tel:">+7 (931) 109-20-10</a></div>
+                        <div class="address__contact__item">Номер телефона: <a class="address__contact__item__link" href="tel:">+7 (931) 109-20-10</a></div>
                         <div class="address__contact__item">Email: info@bushe.ru</div>
                     </div>
 
-                    <h3 class="address__title">форма обратной связи</h3>
+                    <h3 class="address__title address__title--margin">форма обратной связи</h3>
 
                     <form action="/contact" method="post" class="address__form">
                         
-                        <input type="text" class="address__form__input address__form__input--big" name="contact-name" id="contact-name" placeholder="имя">
-                        <input type="text" class="address__form__input" name="contact-email" id="contact-email" placeholder="e-mail">
-                        <input type="text" class="address__form__input" name="contact-tel" id="contact-tel" placeholder="телефон">
+                        <input type="text" class="address__form__input" name="contact-name" id="contact-name" placeholder="имя">
+                        
+                        <div class="address__form__group">
+                            <input type="text" class="address__form__input" name="contact-email" id="contact-email" placeholder="e-mail">
+                            <input type="text" class="address__form__input" name="contact-tel" id="contact-tel" placeholder="телефон">
+                        </div>
+                        
                         <textarea type="text" class="address__form__textarea" name="contact-comment" id="contact-comment" placeholder="ваш вопрос"></textarea>
                         <button type="submit" name="contact-btn" id="contact-btn" class="address__form__btn">отправить заявку</button>
 
@@ -193,27 +251,27 @@
 
         <footer class="footer">
 
-            <div class="container-small">
+            <div class="container-small footer__item-big">
                 <h2 class="footer__title">буше</h2>
                 <div class="footer__info">
                     <div class="footer__info__item">
                         <ul class="footer__info__item__list">
                             <li class="footer__info__item__list__item">
                                 <ul class="footer__sub-list">
-                                    <li class="footer__sub-list__item"><a href="/">главная</a></li>
-                                    <li class="footer__sub-list__item"><a href="/product">продукция</a></li>
-                                    <li class="footer__sub-list__item"><a href="/opt-product">оптовые продажи</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/">главная</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/product">продукция</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/opt-product">оптовые продажи</a></li>
                                 </ul>
                             </li>
                             <li class="footer__info__item__list__item">
                                 <ul class="footer__sub-list">
-                                    <li class="footer__sub-list__item"><a href="/company">о компании</a></li>
-                                    <li class="footer__sub-list__item"><a href="/jobOperings">вакансии</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/company">о компании</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/jobOperings">вакансии</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__info__item">
+                    <div class="footer__info__item footer__info__item-collumn">
                         <div class="footer__links">
                             <div class="footer__links__item"><img src="/img/footer/youtube.svg"></div>
                             <div class="footer__links__item"><img src="/img/footer/vk.svg"></div>
@@ -226,14 +284,18 @@
                 </div>
             </div>
 
-            <div class="container-small footer-theme-gray">
-                <p class="footer-bot-text">Сайт разработан в образовательных целях</p>
-            </div>    
+            <div class="footer-theme-gray">
+                <div class="container-small">
+                    <p class="footer-bot-text">Сайт разработан в образовательных целях</p>
+                </div>   
+            </div>
         </footer>
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="/js/home.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
