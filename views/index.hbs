@@ -17,50 +17,44 @@
 
                     <div class="logo">буше</div>
 
-                    <ul class="menu-list">
-                        <li class="menu-list__item"><a href="/">главная</a></li>
-                        <li class="menu-list__item"><a href="/product">продукция</a></li>
-                        <li class="menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
-                        <li class="menu-list__item"><a href="/company">о компании</a></li>
-                        <li class="menu-list__item"><a href="/jobOperings">вакансии</a></li>
+                    <ul class="menu-list" id="js-menu-d">
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/">главная</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/product">продукция</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/opt-product">оптовые продажи</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/company">о компании</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/jobOperings">вакансии</a></li>
                     </ul>
 
                     <div class="setting">
                         <div class="setting__search">
-                            <input class="setting__search__input" type="text">
-                            <button class="setting__search__btn" id="js-search-btn" type="button"></button>
+                            <input class="setting__search__input" id="js-search-input-d" type="text">
+                            <button class="setting__search__btn" id="js-search-btn-d" type="button"></button>
                         </div>
 
                         <!-- Выпадающее окно -->
-                        <ul class="search-list" data-active="false">
+                        <ul class="search-list" id="js-search-win-d" data-active="false">
                             {{#each search-list}}
-                                <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
+                                <li class="search-list__item"><a href="/product">{{this.title}}</a></li>
                             {{/each}}
                         </ul>
 
                         <a href="/profile" class="setting__icon"><img src="/img/header/profile.svg" class="setting__icon__img"></a>
                         
-                        <div class="setting__icon"><img src="/img/header/basket.svg" class="setting__icon__img"></div>
+                        <div class="setting__icon" id="js-backet-btn-d"><img src="/img/header/basket.svg" class="setting__icon__img"></div>
 
                         <!-- Выпадающее окно -->
-                        <div class="setting__basket" data-active="false">
+                        <div class="setting__basket" id="js-backet-win-d" data-active="false">
                             <h3 class="setting__basket__title">корзина</h3>
                             <ul class="setting__basket__list">
-                                <li class="setting__basket__list__item">список пусть</li>
+                                <li class="setting__basket__list__item">список пуст</li>
                             </ul>
                             <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
                         </div>
-
-                        <div class="language">
-                            <div class="language__ru" id="js-language-ru">РУС</div>
-                            <div class="language__eng" id="js-language-eng">ENG</div>
-                        </div>
-
                     </div>
 
                     <div class="menu-burger">
 
-                        <ul class="menu-list menu-burger__menu-list">
+                        <ul class="menu-list menu-burger__menu-list" id="js-menu-m">
                             <li class="menu-list__item menu-burger__menu-list__item"><a href="/">главная</a></li>
                             <li class="menu-list__item menu-burger__menu-list__item"><a href="/product">продукция</a></li>
                             <li class="menu-list__item menu-burger__menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
@@ -70,12 +64,12 @@
 
                         <div class="setting menu-burger__setting">
                             <div class="setting__search">
-                                <input class="setting__search__input menu-burger__setting__search__input" type="text">
-                                <button class="setting__search__btn setting__search__btn--white" id="js-search-btn" type="button"></button>
+                                <input class="setting__search__input menu-burger__setting__search__input" id="js-search-input-m" type="text">
+                                <button class="setting__search__btn setting__search__btn--white" id="js-search-btn-m" type="button"></button>
                             </div>
 
                             <!-- Выпадающее окно -->
-                            <ul class="search-list" data-active="false">
+                            <ul class="search-list" id="js-search-win-m" data-active="false">
                                 {{#each search-list}}
                                     <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
                                 {{/each}}
@@ -83,22 +77,16 @@
 
                             <a href="/profile" class="setting__icon"><img src="/img/header/profile-white.svg" class="setting__icon__img"></a>
                             
-                            <div class="setting__icon" id="js-basket-btn"><img src="/img/header/basket-white.svg" class="setting__icon__img"></div>
+                            <div class="setting__icon"><img src="/img/header/basket-white.svg" id="js-backet-btn-m" class="setting__icon__img"></div>
 
                             <!-- Выпадающее окно -->
-                            <div class="setting__basket" data-active="false">
+                            <div class="setting__basket" id="js-backet-win-m" data-active="false">
                                 <h3 class="setting__basket__title">корзина</h3>
                                 <ul class="setting__basket__list">
                                     <li class="setting__basket__list__item">список пусть</li>
                                 </ul>
                                 <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
                             </div>
-
-                            <div class="language">
-                                <div class="language__ru menu-burger-language__ru" id="js-language-ru">РУС</div>
-                                <div class="language__eng menu-burger-language__eng" id="js-language-eng">ENG</div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -113,7 +101,7 @@
 
             <div class="container-big home-offer">
                 <p class="home-offer__text home-offer__text--big">Открытие новой торговой точки</p>
-                <div class="home-offer__text" id="js-offer-link"><span>Подробнее</span> <img src="/img/header/arrow.svg"></div>
+                <div class="home-offer__text" id="js-offer-link"><span>Подробнее</span> <img id="js-offer-link__arrow" src="/img/header/arrow.svg"></div>
             </div>
 
         </hedaer>
@@ -122,11 +110,11 @@
             <section class="sale-new">
                 <div class="container-big">
                     <div class="slider-btns">
-                        <div class="slider-btns__item" id="slider-btn-sale">Акции</div>
-                        <div class="slider-btns__item" id="slider-btn-news">Новости</div>
+                        <div class="slider-btns__item" data-active="true" id="slider-btn-sale">Акции</div>
+                        <div class="slider-btns__item" data-active="false" id="slider-btn-news">Новости</div>
                     </div>
                     <div class="slider">
-                        <div class="slider__line">
+                        <div class="slider__line" id="js-slider-salse">
                             {{#each slider-salve}}
                                 <a class="slider__line__item" href="/product">
                                     <img src="{{this.icon}}" class="slider__line__item__icon">
@@ -137,7 +125,7 @@
                                 </a>
                             {{/each}}
                         </div>
-                         <div class="slider__line">
+                         <div class="slider__line" id="js-slider-news">
                             {{#each slider-news}}
                                 <a class="slider__line__item" href="/product">
                                     <img src="{{this.icon}}" class="slider__line__item__icon">
@@ -230,17 +218,17 @@
 
                     <h3 class="address__title address__title--margin">форма обратной связи</h3>
 
-                    <form action="/contact" method="post" class="address__form">
+                    <form method="post" name="contact" class="address__form">
                         
-                        <input type="text" class="address__form__input" name="contact-name" id="contact-name" placeholder="имя">
+                        <input type="text" class="address__form__input" data-mes="имя" name="contactName" id="contact-name" placeholder="имя" >
                         
                         <div class="address__form__group">
-                            <input type="text" class="address__form__input" name="contact-email" id="contact-email" placeholder="e-mail">
-                            <input type="text" class="address__form__input" name="contact-tel" id="contact-tel" placeholder="телефон">
+                            <input type="email" class="address__form__input" data-mes="email" name="contactEmail" id="contact-email" placeholder="e-mail" >
+                            <input type="phone" pattern="^\+7[1-9]{10}$" data-mes="телефон" class="address__form__input" name="contactTel" id="contact-tel" placeholder="телефон">
                         </div>
                         
-                        <textarea type="text" class="address__form__textarea" name="contact-comment" id="contact-comment" placeholder="ваш вопрос"></textarea>
-                        <button type="submit" name="contact-btn" id="contact-btn" class="address__form__btn">отправить заявку</button>
+                        <textarea type="text" class="address__form__textarea" data-mes="вопрос" name="contactComment" id="contact-comment" placeholder="ваш вопрос"></textarea>
+                        <button type="button" name="contactBtn" id="contact-btn" class="address__form__btn">отправить заявку</button>
 
                     </form>
                 </div>

@@ -26,7 +26,21 @@ app.use(express.static(path.join(fs.realpathSync('.') + '/public')));
 app.set('view engine', 'hbs');
 
 app.get('/', (_, res)=>{
-    res.render('index.hbs');
+
+    pool.query(`SELECT * FROM foodStuff`, (errFood, dataFood)=> {
+        if(errFood) return console.log(errFood);
+
+        let arr = [];
+
+        for (let i = 0; i < dataFood.length; i++) {
+            arr.push({
+                'title': dataFood[i].title,
+            })            
+        }
+        return res.render('index.hbs', {
+            'search-list': arr,
+        });
+    });
 });
 
 app.listen(3000, ()=>{

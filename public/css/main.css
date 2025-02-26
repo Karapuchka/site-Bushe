@@ -98,13 +98,19 @@
     list-style: none;
     color: #fff;
 
+    line-height: 30px;
+
     user-select: none;
     cursor: pointer;
 }
 
+.search-list__item > a{
+    color: #fff;
+}
+
 .setting__basket{
     position: absolute;
-    top: 83%;
+    top: 120%;
     left: 30%;
     width: 290px;
     overflow: auto;
@@ -133,7 +139,7 @@
     padding: 10px;
     list-style: none;
     overflow: auto;
-    background-color: rgba(15, 15, 15, 0.8);
+    background-color: rgba(54, 54, 54, 0.8);
     font-size: 18px;
 }
 
@@ -145,46 +151,6 @@
     justify-content: center;
     background-color: rgba(128, 130, 133, 0.8);
     font-size: 24px;
-}
-
-.language{
-    width: 90px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-}
-
-.language__ru{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 48px;
-    height: 30px;
-    background-color: black;
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-}
-
-.language__eng{
-    position: absolute;
-    top: 0;
-    left: 30%;
-
-    width: 60px;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-right: 5px;
 }
 
 .main{
@@ -329,17 +295,6 @@
     border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-.menu-burger-language__ru{
-
-    background-color: #fff;
-    color: black;
-}
-
-.menu-burger-language__eng{
-    border: 1px solid rgb(255, 255, 255);
-    color: #fff;
-}
-
 .menu-burget-btns{
     width: 40px;
     padding: 1px 0;
@@ -356,6 +311,12 @@
     height: 1px;
 
     background: #000;
+}
+
+.menu-list__item:hover > .menu-list__item__link{
+    color: rgb(82, 80, 80);
+
+    transition: all .4s ease;
 }
 
 @media screen and (max-width: 1750px) {
@@ -384,8 +345,12 @@
         display: none;
     }
     
-    .menu-burger, .menu-burger__setting, .menu-burger__menu-list{
+    .menu-burger, .menu-burger__setting, .menu-burger__menu-list, .menu-burget-btns{
         display: flex;
+    }
+
+    .menu-burger__setting__search__input{
+        color: #fff;
     }
 }
 
