@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/product.css">
-    <title>Продукция</title>
+    <link rel="stylesheet" href="/css/about-company.css">
+    <title>О компании</title>
 </head>
 <body>
     <div class="wrapper">
@@ -18,7 +18,7 @@
                     <div class="logo">буше</div>
 
                     <ul class="menu-list" id="js-menu-d">
-                        <li class="menu-list__item"><a class="menu-list__item__link" href="/">главная</a></li>
+                      <li class="menu-list__item"><a class="menu-list__item__link" href="/">главная</a></li>
                         <li class="menu-list__item"><a class="menu-list__item__link" href="/product">продукция</a></li>
                         <li class="menu-list__item"><a class="menu-list__item__link" href="/opt-product">оптовые продажи</a></li>
                         <li class="menu-list__item"><a class="menu-list__item__link" href="/company">о компании</a></li>
@@ -34,7 +34,7 @@
                         <!-- Выпадающее окно -->
                         <ul class="search-list" id="js-search-win-d" data-active="false">
                             {{#each search-list}}
-                                <li class="search-list__item"><a href="/product">{{this.title}}</a></li>
+                                <li class="search-list__item"><a href="/about-company">{{this.title}}</a></li>
                             {{/each}}
                         </ul>
 
@@ -55,7 +55,7 @@
                     <div class="menu-burger">
 
                         <ul class="menu-list menu-burger__menu-list" id="js-menu-m">
-                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/">главная</a></li>
+                      <li class="menu-list__item menu-burger__menu-list__item"><a href="/">главная</a></li>
                             <li class="menu-list__item menu-burger__menu-list__item"><a href="/product">продукция</a></li>
                             <li class="menu-list__item menu-burger__menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
                             <li class="menu-list__item menu-burger__menu-list__item"><a href="/company">о компании</a></li>
@@ -99,89 +99,50 @@
                 </div>
             </div>
 
+            <div class="about-company-offer"></div>
+
         </hedaer>
 
         <main class="main">
-<<<<<<< HEAD
-            <div class="contaner-big product-content">
-                <ul class="product-menu">
-                    <li class="product-menu__item product-menu__item-active" id="js-btn-all">вся продукция</li>
-                    <li class="product-menu__item" id="js-btn-brekfast">завтраки</li>
-                    <li class="product-menu__item" id="js-btn-drink">напитки</li>
-                    <li class="product-menu__item" id="js-btn-cake">торты</li>
-                    <li class="product-menu__item" id="js-btn-sweet">пирожные</li>
-                    <li class="product-menu__item" id="js-btn-eclair">эклеры</li>
-                    <li class="product-menu__item" id="js-btn-puff">слойка</li>
-                    <li class="product-menu__item" id="js-btn-bread">хлеб</li>
-                    <li class="product-menu__item" id="js-btn-sandwiches">сэндвичи</li>
-                    <li class="product-menu__item" id="js-btn-soup">супы</li>
-                    <li class="product-menu__item" id="js-btn-hot-salad">горячие блюда и салаты</li>
-                    <li class="product-menu__item" id="js-btn-clothes">одежда</li>
-                    <li class="product-menu__item" id="js-btn-set">наборы</li>
-=======
-            <div class="container-big product-content">
-                <ul class="product-menu">
-                    <li class="product-menu__item" data-active="true" id="js-btn-all">вся продукция</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-brekfast">завтраки</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-drink">напитки</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-cake">торты</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-sweet">пирожные</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-eclair">эклеры</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-puff">слойка</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-bread">хлеб</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-sandwiches">сэндвичи</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-soup">супы</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-hot-salad">горячие блюда и салаты</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-clothes">одежда</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-set">наборы</li>
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
-                </ul>
-                <div class="product-list">
-                    <div class="prooduct-list__header">
-                        <div class="product-list__title">
-<<<<<<< HEAD
-                            <h2 class="product-list__title__text">вся продукция</h2>
-=======
-                            <h2 class="product-list__title__text" id="js-product-title">вся продукция</h2>
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
-                            <span class="product-list__title__count">{{countFoods}}</span>
-                        </div>
-                        <div class="prooduct-list__filter">
-                            <select class="prooduct-list__filter__list-text" id="filter-title">
-                                <option class="prooduct-list__filter__list-text__value" value="price">цена</option>
-                                <option class="prooduct-list__filter__list-text__value" value="abc" selected>по алфавиту</option>
-                            </select>
-<<<<<<< HEAD
-                            <div class="prooduct-list__filter__img"><img src="/img/product/filter.svg" class="prooduct-list__filter__img__icon"></div>
-=======
-                            <div class="prooduct-list__filter__img" data-sort="big"><img id="filter-sort"  src="/img/product/filter.svg" class="prooduct-list__filter__img__icon"></div>
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
-                        </div>
-                    </div>
-                    <ul class="product-list__main">
-                        {{#each productFoods}}
-<<<<<<< HEAD
-                            <li class="product-list__main__item">
-=======
-                            <li class="product-list__main__item" data-type="{{this.type}}">
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
-                                <div class="product-list__main__item__img"><img src="{{this.icon}}" class="product-list__main__item__img__icon"></div>
-                                <div class="product-list__main__item__info">
-                                    <h4 class="product-list__main__item__info__title">{{this.title}}</h4>
-                                    <div class="product-list__main__item__info__group">
-<<<<<<< HEAD
-                                        <h4 class="product-list__main__item__info__price">{{this.price}}</h4>
-=======
-                                        <h4 class="product-list__main__item__info__price">{{this.price}} р.</h4>
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
-                                        <div class="product-list__main__item__info__btn">В корзину</div>
-                                    </div>
-                                </div>
-                            </li>
-                        {{/each}}
-                    </ul>
+
+            <section class="container-big about-company-block-text">
+
+                <h2 class="about-company-title">о компании</h2>
+                    
+                <p class="about-company-text">
+                    «Быть живым в каждый момент времени» — это парадигма буше, которая лежит в основе всего, что мы делаем, аж с 10 февраля 1999 года, когда открылось первое буше на улице Разъезжая дом 13.
+                </p>
+
+                <p class="about-company-text">
+                    Любопытство и постоянная страсть к изменениям привели к тому, что спустя эти годы у нас уже больше 60 мест под вывесками буше и теплого хлеба. Все менялось и продолжает меняться, неизменным оставалось только наше отношение к качеству продукта и желание в этом совершенствоваться. Мы используем только натуральные чистые ингредиенты, только настоящее сливочное масло. Мы не используем смеси и полуфабрикаты. Все, что можем сделать сами — делаем сами От сыра до конфитюра из свежих ягод и
+                    комбучи. Мы производим хлеб полного цикла: ведем закваски, варим заварки, следуем технологии длительного брожения — всё это позволяет добиться максимального аромата и длительности сохранения свежести хлеба. Наша гордость — это линейка хлебов на 300-летней закваске из Италии. Мы сами ищем, выбираем и покупаем зеленое кофейное зерно у фермеров прямо там, где оно растет.
+                    Обжариваем его исходя из собственных профилей, специально подобранных, чтобы раскрыть лучший вкус зерна уровня speciality.
+                </p>
+
+            </section>
+
+            <section class="container-big about-company-images">
+
+                <div class="about-company-images__item"><img src="/img/about-company/sweet-1.webp" class="about-company-images__item__icon"></div>
+
+                <div class="about-company-images__item">
+
+                    <div class="about-company-images__item__subitem"><img src="/img/about-company/sweet-2.webp" class="about-company-images__item__icon"></div>
+
+                    <div class="about-company-images__item__subitem"><img src="/img/about-company/sweet-3.webp" class="about-company-images__item__icon"></div>
+
                 </div>
-            </div>
+
+            </section>
+
+            <section class="container-big">
+
+                <p class="about-company-text">
+                   Мы были одной из первых компаний в индустрии, которая получила международных сертификаты ISO 22000, ISO 9000. Наши любимые продукты и люди, которые их делают неоднократно становились призерами и победителями международных индустриальных конкурсов. Мы живем в рамках бережного отношения к окружающему нас пространству. Уже на протяжении многих лет мы сфокусированы на том, чтобы быть максимально ответственной компанией. А еще буше — это «больше чем булочки». Мы живем в свободе культур и творчества внутри компании, и это привело к рождению огромного количества проектов: от серий короткометражных фильмов и мультфильмов до городских событий абсолютно разной направленности объединённых одной идеей: они должны развивать наш город, от самых неожиданных коллабораций до создания проекта Город Вопреки.
+                </p>
+
+            </section>
+
         </main>
 
         <footer class="footer">
@@ -194,8 +155,8 @@
                             <li class="footer__info__item__list__item">
                                 <ul class="footer__sub-list">
                                     <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/">главная</a></li>
-                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/product">продукция</a></li>
-                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/opt-product">оптовые продажи</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/about-company">продукция</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/opt-about-company">оптовые продажи</a></li>
                                 </ul>
                             </li>
                             <li class="footer__info__item__list__item">
@@ -230,10 +191,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<<<<<<< HEAD
-=======
-    <script src="/js/product.js"></script>
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
     <script src="/js/main.js"></script>
 </body>
-</html>
+</html> 

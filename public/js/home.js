@@ -32,8 +32,11 @@ function setActiveSlider(activeItem, otherItem, activeSlider, otherSlider){
         gsap.to(activeItem, {'background': 'white', 'color': 'black'});
         gsap.to(otherItem, {'background': 'rgba(128, 130, 133, 0.8)', 'color': 'white'});
 
-        gsap.to(activeSlider, {'opacity': '0', 'display': 'none'});
-        gsap.to(otherSlider, {'opacity': '1', 'display': 'block'});
+        gsap.to(activeSlider, {'opacity': '0', 'display': 'none', 'duration': '.7'});
+        
+        setTimeout(()=>{
+            gsap.to(otherSlider, {'opacity': '1', 'display': 'flex', 'duration': '1'});
+        }, 800);
     }
 }
 

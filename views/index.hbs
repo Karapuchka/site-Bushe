@@ -116,25 +116,39 @@
                     <div class="slider">
                         <div class="slider__line" id="js-slider-salse">
                             {{#each slider-salve}}
-                                <a class="slider__line__item" href="/product">
+                                <div class="slider__line__item">
                                     <img src="{{this.icon}}" class="slider__line__item__icon">
                                     <div class="slider__line__item__content">
-                                        <span class="slider__line__item__content__text slider__line__item__content__text--big">{{this.sale}}</span>
-                                        <span class="slider__line__item__content__text">{{this.title}}</span>
+                                        <span class="slider__line__item__content__text"><a href="/product">{{this.sale}}% - {{this.title}}</a></span>
                                     </div>
-                                </a>
+                                </div>
                             {{/each}}
                         </div>
                          <div class="slider__line" id="js-slider-news">
-                            {{#each slider-news}}
-                                <a class="slider__line__item" href="/product">
-                                    <img src="{{this.icon}}" class="slider__line__item__icon">
-                                    <div class="slider__line__item__content">
-                                        <span class="slider__line__item__content__text slider__line__item__content__text--big">{{this.sale}}</span>
-                                        <span class="slider__line__item__content__text">{{this.title}}</span>
-                                    </div>
-                                </a>
-                            {{/each}}
+                            <div class="slider__line__item">
+                                <img src="/img/home/home-news.webp" class="slider__line__item__icon">
+                                <div class="slider__line__item__content">
+                                    <span class="slider__line__item__content__text"><a href="/">Открытие новой точки</a></span>
+                                </div>
+                            </div>
+                            <div class="slider__line__item">
+                                <img src="/img/cake/chocolate.webp" class="slider__line__item__icon">
+                                <div class="slider__line__item__content">
+                                    <span class="slider__line__item__content__text"><a href="/product">Новое блюдо</a></span>
+                                </div>
+                            </div>
+                            <div class="slider__line__item">
+                                <img src="/img/clothes/cap-black.webp" class="slider__line__item__icon">
+                                <div class="slider__line__item__content">
+                                    <span class="slider__line__item__content__text"><a href="/product">Новый мерч</a></span>
+                                </div>
+                            </div>
+                            <div class="slider__line__item">
+                                <img src="/img/bread/white.webp" class="slider__line__item__icon">
+                                <div class="slider__line__item__content">
+                                    <span class="slider__line__item__content__text"><a href="/product">Любимая булочка</a></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

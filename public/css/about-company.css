@@ -1,0 +1,47 @@
+.header--bg{
+    background: url('/img/about-company/about-company-header.webp') no-repeat center center / cover;
+}
+
+.about-company-offer{
+    height: 500px;
+}
+
+.about-company-block-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-company-title{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.about-company-text{
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.about-company-images{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-company-images__item{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-company-images__item__icon{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    padding: 40px 0;
+}
