@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/about-company.css">
+    <title>О компании</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <hedaer class="header header--bg">
+
+            <div class="header-top">
+                <div class="container-big header--container">
+
+                    <div class="logo">буше</div>
+
+                    <ul class="menu-list" id="js-menu-d">
+                      <li class="menu-list__item"><a class="menu-list__item__link" href="/">главная</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/product">продукция</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/opt-product">оптовые продажи</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/company">о компании</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/jobOperings">вакансии</a></li>
+                    </ul>
+
+                    <div class="setting">
+                        <div class="setting__search">
+                            <input class="setting__search__input" id="js-search-input-d" type="text">
+                            <button class="setting__search__btn" id="js-search-btn-d" type="button"></button>
+                        </div>
+
+                        <!-- Выпадающее окно -->
+                        <ul class="search-list" id="js-search-win-d" data-active="false">
+                            {{#each search-list}}
+                                <li class="search-list__item"><a href="/about-company">{{this.title}}</a></li>
+                            {{/each}}
+                        </ul>
+
+                        <a href="/profile" class="setting__icon"><img src="/img/header/profile.svg" class="setting__icon__img"></a>
+                        
+                        <div class="setting__icon" id="js-backet-btn-d"><img src="/img/header/basket.svg" class="setting__icon__img"></div>
+
+                        <!-- Выпадающее окно -->
+                        <div class="setting__basket" id="js-backet-win-d" data-active="false">
+                            <h3 class="setting__basket__title">корзина</h3>
+                            <ul class="setting__basket__list">
+                                <li class="setting__basket__list__item">список пуст</li>
+                            </ul>
+                            <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-burger">
+
+                        <ul class="menu-list menu-burger__menu-list" id="js-menu-m">
+                      <li class="menu-list__item menu-burger__menu-list__item"><a href="/">главная</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/product">продукция</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/company">о компании</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/jobOperings">вакансии</a></li>
+                        </ul>
+
+                        <div class="setting menu-burger__setting">
+                            <div class="setting__search">
+                                <input class="setting__search__input menu-burger__setting__search__input" id="js-search-input-m" type="text">
+                                <button class="setting__search__btn setting__search__btn--white" id="js-search-btn-m" type="button"></button>
+                            </div>
+
+                            <!-- Выпадающее окно -->
+                            <ul class="search-list" id="js-search-win-m" data-active="false">
+                                {{#each search-list}}
+                                    <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
+                                {{/each}}
+                            </ul>
+
+                            <a href="/profile" class="setting__icon"><img src="/img/header/profile-white.svg" class="setting__icon__img"></a>
+                            
+                            <div class="setting__icon"><img src="/img/header/basket-white.svg" id="js-backet-btn-m" class="setting__icon__img"></div>
+
+                            <!-- Выпадающее окно -->
+                            <div class="setting__basket" id="js-backet-win-m" data-active="false">
+                                <h3 class="setting__basket__title">корзина</h3>
+                                <ul class="setting__basket__list">
+                                    <li class="setting__basket__list__item">список пусть</li>
+                                </ul>
+                                <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-burget-btns" data-active="false" id="js-burger-btns">
+                        <hr class="menu-burget-btns__btn">
+                        <hr class="menu-burget-btns__btn">
+                        <hr class="menu-burget-btns__btn">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="about-company-offer"></div>
+
+        </hedaer>
+
+        <main class="main">
+
+            <section class="container-big about-company-block-text">
+
+                <h2 class="about-company-title">о компании</h2>
+                    
+                <p class="about-company-text">
+                    «Быть живым в каждый момент времени» — это парадигма буше, которая лежит в основе всего, что мы делаем, аж с 10 февраля 1999 года, когда открылось первое буше на улице Разъезжая дом 13.
+                </p>
+
+                <p class="about-company-text">
+                    Любопытство и постоянная страсть к изменениям привели к тому, что спустя эти годы у нас уже больше 60 мест под вывесками буше и теплого хлеба. Все менялось и продолжает меняться, неизменным оставалось только наше отношение к качеству продукта и желание в этом совершенствоваться. Мы используем только натуральные чистые ингредиенты, только настоящее сливочное масло. Мы не используем смеси и полуфабрикаты. Все, что можем сделать сами — делаем сами От сыра до конфитюра из свежих ягод и
+                    комбучи. Мы производим хлеб полного цикла: ведем закваски, варим заварки, следуем технологии длительного брожения — всё это позволяет добиться максимального аромата и длительности сохранения свежести хлеба. Наша гордость — это линейка хлебов на 300-летней закваске из Италии. Мы сами ищем, выбираем и покупаем зеленое кофейное зерно у фермеров прямо там, где оно растет.
+                    Обжариваем его исходя из собственных профилей, специально подобранных, чтобы раскрыть лучший вкус зерна уровня speciality.
+                </p>
+
+            </section>
+
+            <section class="container-big about-company-images">
+
+                <div class="about-company-images__item"><img src="/img/about-company/sweet-1.webp" class="about-company-images__item__icon"></div>
+
+                <div class="about-company-images__item">
+
+                    <div class="about-company-images__item__subitem"><img src="/img/about-company/sweet-2.webp" class="about-company-images__item__icon"></div>
+
+                    <div class="about-company-images__item__subitem"><img src="/img/about-company/sweet-3.webp" class="about-company-images__item__icon"></div>
+
+                </div>
+
+            </section>
+
+            <section class="container-big">
+
+                <p class="about-company-text">
+                   Мы были одной из первых компаний в индустрии, которая получила международных сертификаты ISO 22000, ISO 9000. Наши любимые продукты и люди, которые их делают неоднократно становились призерами и победителями международных индустриальных конкурсов. Мы живем в рамках бережного отношения к окружающему нас пространству. Уже на протяжении многих лет мы сфокусированы на том, чтобы быть максимально ответственной компанией. А еще буше — это «больше чем булочки». Мы живем в свободе культур и творчества внутри компании, и это привело к рождению огромного количества проектов: от серий короткометражных фильмов и мультфильмов до городских событий абсолютно разной направленности объединённых одной идеей: они должны развивать наш город, от самых неожиданных коллабораций до создания проекта Город Вопреки.
+                </p>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+
+            <div class="container-small footer__item-big">
+                <h2 class="footer__title">буше</h2>
+                <div class="footer__info">
+                    <div class="footer__info__item">
+                        <ul class="footer__info__item__list">
+                            <li class="footer__info__item__list__item">
+                                <ul class="footer__sub-list">
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/">главная</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/about-company">продукция</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/opt-about-company">оптовые продажи</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer__info__item__list__item">
+                                <ul class="footer__sub-list">
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/company">о компании</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/jobOperings">вакансии</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__info__item footer__info__item-collumn">
+                        <div class="footer__links">
+                            <div class="footer__links__item"><img src="/img/footer/youtube.svg"></div>
+                            <div class="footer__links__item"><img src="/img/footer/vk.svg"></div>
+                            <div class="footer__links__item"><img src="/img/footer/tg.svg"></div>
+                            <div class="footer__links__item"><img src="/img/footer/ws.svg"></div>
+                        </div>
+
+                        <p class="footer__info__email">info@bushe.ru</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-theme-gray">
+                <div class="container-small">
+                    <p class="footer-bot-text">Сайт разработан в образовательных целях</p>
+                </div>   
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <title>Продукция</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <hedaer class="header header--bg">
+
+            <div class="header-top">
+                <div class="container-big header--container">
+
+                    <div class="logo">буше</div>
+
+                    <ul class="menu-list" id="js-menu-d">
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/">главная</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/product">продукция</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/opt-product">оптовые продажи</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/company">о компании</a></li>
+                        <li class="menu-list__item"><a class="menu-list__item__link" href="/jobOperings">вакансии</a></li>
+                    </ul>
+
+                    <div class="setting">
+                        <div class="setting__search">
+                            <input class="setting__search__input" id="js-search-input-d" type="text">
+                            <button class="setting__search__btn" id="js-search-btn-d" type="button"></button>
+                        </div>
+
+                        <!-- Выпадающее окно -->
+                        <ul class="search-list" id="js-search-win-d" data-active="false">
+                            {{#each search-list}}
+                                <li class="search-list__item"><a href="/product">{{this.title}}</a></li>
+                            {{/each}}
+                        </ul>
+
+                        <a href="/profile" class="setting__icon"><img src="/img/header/profile.svg" class="setting__icon__img"></a>
+                        
+                        <div class="setting__icon" id="js-backet-btn-d"><img src="/img/header/basket.svg" class="setting__icon__img"></div>
+
+                        <!-- Выпадающее окно -->
+                        <div class="setting__basket" id="js-backet-win-d" data-active="false">
+                            <h3 class="setting__basket__title">корзина</h3>
+                            <ul class="setting__basket__list">
+                                <li class="setting__basket__list__item">список пуст</li>
+                            </ul>
+                            <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-burger">
+
+                        <ul class="menu-list menu-burger__menu-list" id="js-menu-m">
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/">главная</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/product">продукция</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/opt-product">оптовые продажи</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/company">о компании</a></li>
+                            <li class="menu-list__item menu-burger__menu-list__item"><a href="/jobOperings">вакансии</a></li>
+                        </ul>
+
+                        <div class="setting menu-burger__setting">
+                            <div class="setting__search">
+                                <input class="setting__search__input menu-burger__setting__search__input" id="js-search-input-m" type="text">
+                                <button class="setting__search__btn setting__search__btn--white" id="js-search-btn-m" type="button"></button>
+                            </div>
+
+                            <!-- Выпадающее окно -->
+                            <ul class="search-list" id="js-search-win-m" data-active="false">
+                                {{#each search-list}}
+                                    <li class="search-list__item" data-id="{{this.id}}">{{this.title}}</li>
+                                {{/each}}
+                            </ul>
+
+                            <a href="/profile" class="setting__icon"><img src="/img/header/profile-white.svg" class="setting__icon__img"></a>
+                            
+                            <div class="setting__icon"><img src="/img/header/basket-white.svg" id="js-backet-btn-m" class="setting__icon__img"></div>
+
+                            <!-- Выпадающее окно -->
+                            <div class="setting__basket" id="js-backet-win-m" data-active="false">
+                                <h3 class="setting__basket__title">корзина</h3>
+                                <ul class="setting__basket__list">
+                                    <li class="setting__basket__list__item">список пусть</li>
+                                </ul>
+                                <button type="button" class="setting__basket__btn" id="btn-basket">заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-burget-btns" data-active="false" id="js-burger-btns">
+                        <hr class="menu-burget-btns__btn">
+                        <hr class="menu-burget-btns__btn">
+                        <hr class="menu-burget-btns__btn">
+                    </div>
+
+                </div>
+            </div>
+
+        </hedaer>
+
+        <main class="main">
+            <div class="container-big product-content">
+                <ul class="product-menu">
+                    <li class="product-menu__item" data-active="true" id="js-btn-all">вся продукция</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-brekfast">завтраки</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-drink">напитки</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-cake">торты</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-sweet">пирожные</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-eclair">эклеры</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-puff">слойка</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-bread">хлеб</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-sandwiches">сэндвичи</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-soup">супы</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-hot-salad">горячие блюда и салаты</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-clothes">одежда</li>
+                    <li class="product-menu__item" data-active="false" id="js-btn-set">наборы</li>
+                </ul>
+                <div class="product-list">
+                    <div class="prooduct-list__header">
+                        <div class="product-list__title">
+                            <h2 class="product-list__title__text" id="js-product-title">вся продукция</h2>
+                            <span class="product-list__title__count">{{countFoods}}</span>
+                        </div>
+                        <div class="prooduct-list__filter">
+                            <select class="prooduct-list__filter__list-text" id="filter-title">
+                                <option class="prooduct-list__filter__list-text__value" value="price">цена</option>
+                                <option class="prooduct-list__filter__list-text__value" value="abc" selected>по алфавиту</option>
+                            </select>
+                            <div class="prooduct-list__filter__img" data-sort="big"><img id="filter-sort"  src="/img/product/filter.svg" class="prooduct-list__filter__img__icon"></div>
+                        </div>
+                    </div>
+                    <ul class="product-list__main">
+                        {{#each productFoods}}
+                            <li class="product-list__main__item" data-type="{{this.type}}">
+                                <div class="product-list__main__item__img"><img src="{{this.icon}}" class="product-list__main__item__img__icon"></div>
+                                <div class="product-list__main__item__info">
+                                    <h4 class="product-list__main__item__info__title">{{this.title}}</h4>
+                                    <div class="product-list__main__item__info__group">
+                                        <h4 class="product-list__main__item__info__price">{{this.price}} р.</h4>
+                                        <div class="product-list__main__item__info__btn">В корзину</div>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+
+            <div class="container-small footer__item-big">
+                <h2 class="footer__title">буше</h2>
+                <div class="footer__info">
+                    <div class="footer__info__item">
+                        <ul class="footer__info__item__list">
+                            <li class="footer__info__item__list__item">
+                                <ul class="footer__sub-list">
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/">главная</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/product">продукция</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/opt-product">оптовые продажи</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer__info__item__list__item">
+                                <ul class="footer__sub-list">
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/company">о компании</a></li>
+                                    <li class="footer__sub-list__item"><a class="footer__sub-list__item__link" href="/jobOperings">вакансии</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__info__item footer__info__item-collumn">
+                        <div class="footer__links">
+                            <div class="footer__links__item"><img src="/img/footer/youtube.svg"></div>
+                            <div class="footer__links__item"><img src="/img/footer/vk.svg"></div>
+                            <div class="footer__links__item"><img src="/img/footer/tg.svg"></div>
+                            <div class="footer__links__item"><img src="/img/footer/ws.svg"></div>
+                        </div>
+
+                        <p class="footer__info__email">info@bushe.ru</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-theme-gray">
+                <div class="container-small">
+                    <p class="footer-bot-text">Сайт разработан в образовательных целях</p>
+                </div>   
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

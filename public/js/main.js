@@ -1,11 +1,5 @@
 let md = new MobileDetect(window.navigator.userAgent);
 
-if(md.mobile() != null){
-        
-} else {
-
-}
-
 let burgerBtn = document.getElementById('js-burger-btns');
 let menuBurger = document.querySelector('.menu-burger');
 
@@ -39,6 +33,20 @@ let searchInputD = document.getElementById('js-search-input-d');
 let searchWindowM = document.getElementById('js-search-win-m');
 let searchInputM = document.getElementById('js-search-input-m');
 
+let allFoodsListSearch = [];
+
+
+if(md.mobile() != null){
+    for (let i = 0; i < searchWindowD.children.length; i++) {
+        allFoodsListSearch.push(searchWindowD.children[i].innerText)
+    }
+} else {
+
+    for (let i = 0; i < searchWindowM.children.length; i++) {
+        allFoodsListSearch.push(searchWindowM.children[i].innerText)
+    }
+}
+
 function openWinSearch(input, win){
     input.addEventListener('input', ()=>{
         if(win.dataset.active == 'false'){
@@ -52,6 +60,16 @@ function openWinSearch(input, win){
             
             win.setAttribute('data-active', 'false');
         }
+
+        win.innerHTML = '';
+        allFoodsListSearch.forEach(item => {
+        if (item.toLowerCase().includes(input.value)) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            li.classList.add('search-list__item');
+            win.appendChild(li);
+        }
+    });
     });       
 };
 
