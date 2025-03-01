@@ -36,6 +36,10 @@ app.get('/', (_, res)=>{
         for (let i = 0; i < dataFood.length; i++) {
             searchFoodList.push({
                 'title': dataFood[i].title,
+<<<<<<< HEAD
+            });            
+        }
+=======
             });
             
             if(+dataFood[i].sale != 0){
@@ -48,6 +52,7 @@ app.get('/', (_, res)=>{
         };
 
         
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
         return res.render('index.hbs', {
             'search-list': searchFoodList,
             'slider-salve': saleFoodList,
@@ -108,6 +113,59 @@ app.get('/opt-product', (_,res)=>{
         };
 
         return res.render('optProduct.hbs', {
+            'search-list': listSearch,
+            'productFoods': listFoods,
+        });
+    });
+});
+
+app.get('/product', (_, res)=>{
+    pool.query('SELECT * FROM foodStuff', (errFood, dataFood)=>{
+        if(errFood) return console.log(errFood);
+
+        let listFoods, listSearch = [];
+        let countFoods = dataFood.length;
+        
+        for (let i = 0; i < dataFood.length; i++) {
+            listFoods.push({
+                'title': dataFood[i].title,
+                'icon': dataFood[i].img,
+                'price': dataFood[i].cost,
+            });
+
+            listSearch.push({
+                'title': dataFood[i].title,
+            });        
+        };
+
+        return res.render('index.hbs', {
+            'search-list': listSearch,
+            'countFoods': countFoods,
+            'productFoods': listFoods,
+        });
+    });
+});
+
+app.get('/opt-product', (_,res)=>{
+    pool.query('SELECT * FROM foodStuff', (errFood, dataFood)=>{
+        if(errFood) return console.log(errFood);
+
+        let listFoods, listSearch = [];
+        
+        for (let i = 0; i < dataFood.length; i++) {
+            if(dataFood[i].type == 'bread'){
+                listFoods.push({
+                    'title': dataFood[i].title,
+                    'icon': dataFood[i].img,
+                });
+
+                listSearch.push({
+                    'title': dataFood[i].title,
+                });   
+            };
+        };
+
+        return res.render('index.hbs', {
             'search-list': listSearch,
             'productFoods': listFoods,
         });

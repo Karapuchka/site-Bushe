@@ -102,6 +102,23 @@
         </hedaer>
 
         <main class="main">
+<<<<<<< HEAD
+            <div class="contaner-big product-content">
+                <ul class="product-menu">
+                    <li class="product-menu__item product-menu__item-active" id="js-btn-all">вся продукция</li>
+                    <li class="product-menu__item" id="js-btn-brekfast">завтраки</li>
+                    <li class="product-menu__item" id="js-btn-drink">напитки</li>
+                    <li class="product-menu__item" id="js-btn-cake">торты</li>
+                    <li class="product-menu__item" id="js-btn-sweet">пирожные</li>
+                    <li class="product-menu__item" id="js-btn-eclair">эклеры</li>
+                    <li class="product-menu__item" id="js-btn-puff">слойка</li>
+                    <li class="product-menu__item" id="js-btn-bread">хлеб</li>
+                    <li class="product-menu__item" id="js-btn-sandwiches">сэндвичи</li>
+                    <li class="product-menu__item" id="js-btn-soup">супы</li>
+                    <li class="product-menu__item" id="js-btn-hot-salad">горячие блюда и салаты</li>
+                    <li class="product-menu__item" id="js-btn-clothes">одежда</li>
+                    <li class="product-menu__item" id="js-btn-set">наборы</li>
+=======
             <div class="container-big product-content">
                 <ul class="product-menu">
                     <li class="product-menu__item" data-active="true" id="js-btn-all">вся продукция</li>
@@ -117,11 +134,16 @@
                     <li class="product-menu__item" data-active="false" id="js-btn-hot-salad">горячие блюда и салаты</li>
                     <li class="product-menu__item" data-active="false" id="js-btn-clothes">одежда</li>
                     <li class="product-menu__item" data-active="false" id="js-btn-set">наборы</li>
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
                 </ul>
                 <div class="product-list">
                     <div class="prooduct-list__header">
                         <div class="product-list__title">
+<<<<<<< HEAD
+                            <h2 class="product-list__title__text">вся продукция</h2>
+=======
                             <h2 class="product-list__title__text" id="js-product-title">вся продукция</h2>
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
                             <span class="product-list__title__count">{{countFoods}}</span>
                         </div>
                         <div class="prooduct-list__filter">
@@ -129,18 +151,34 @@
                                 <option class="prooduct-list__filter__list-text__value" value="price">цена</option>
                                 <option class="prooduct-list__filter__list-text__value" value="abc" selected>по алфавиту</option>
                             </select>
+<<<<<<< HEAD
+                            <div class="prooduct-list__filter__img"><img src="/img/product/filter.svg" class="prooduct-list__filter__img__icon"></div>
+=======
                             <div class="prooduct-list__filter__img" data-sort="big"><img id="filter-sort"  src="/img/product/filter.svg" class="prooduct-list__filter__img__icon"></div>
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
                         </div>
                     </div>
                     <ul class="product-list__main">
                         {{#each productFoods}}
+<<<<<<< HEAD
+                            <li class="product-list__main__item">
+=======
                             <li class="product-list__main__item" data-type="{{this.type}}">
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
                                 <div class="product-list__main__item__img"><img src="{{this.icon}}" class="product-list__main__item__img__icon"></div>
                                 <div class="product-list__main__item__info">
                                     <h4 class="product-list__main__item__info__title">{{this.title}}</h4>
                                     <div class="product-list__main__item__info__group">
+<<<<<<< HEAD
+                                        <h4 class="product-list__main__item__info__price">{{this.price}}</h4>
+=======
                                         <h4 class="product-list__main__item__info__price">{{this.price}} р.</h4>
+<<<<<<< HEAD
                                         <div class="product-list__main__item__info__btn" data-food="{{this.title}}">В корзину</div>
+=======
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
+                                        <div class="product-list__main__item__info__btn">В корзину</div>
+>>>>>>> 71453b713ab929bd35ba90d7b1f1a0a481ba977a
                                     </div>
                                 </div>
                             </li>
@@ -196,7 +234,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<<<<<<< HEAD
+=======
     <script src="/js/product.js"></script>
+>>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
     <script src="/js/main.js"></script>
 </body>
 </html>
