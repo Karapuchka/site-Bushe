@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/optProduct.css">
     <title>Оптовая продукция</title>
 </head>
 <body>
@@ -101,9 +102,38 @@
         </hedaer>
 
         <main class="main">
-            <div class="contaner-big">
-                
+
+            <div class="container-big">
+                <h2 class="optProduct-title">оптовые продажи</h2>
+                <ul class="optProduct-list">
+                    {{#each productFoods}}
+                        <li class="optProduct-list__item">
+                            <img class="optProduct-list__item__img" src="{{this.icon}}">
+                            <h3 class="optProduct-list__item__title">{{this.title}}</h3>
+                        </li>
+                    {{/each}}
+                </ul>
             </div>
+
+            <div class="container-small">
+                <h3 class="optProduct-subtitle">контакты</h3>
+                <p class="optProduct-text">
+                    Просто заполните форму ниже или напишите нам на sale@bushe.ru и мы отправим вам стоимость изделий и условия партнерства.
+                </p>
+                <form action="/contact" name="contact" class="optProduct-form">
+                    <input type="text" name="name" data-mes="имя" class="optProduct-form__input" placeholder="имя контактного лица">
+                    <div class="optProduct-form__goup">
+                        <input type="text" name="email" data-mes="email" class="optProduct-form__input" placeholder="e-mail">
+                        <input type="text" name="phone" data-mes="телефон" class="optProduct-form__input" placeholder="телефон">
+                    </div>
+                      <div class="optProduct-form__goup">
+                        <input type="text" name="name-company" data-mes="название организации" class="optProduct-form__input" placeholder="компания">
+                        <input type="text" name="role-company" data-mes="сфера деятельности" class="optProduct-form__input" placeholder="сфера деятельности">
+                    </div>
+                    <button class="optProduct-form__btn" id="contact-btn" type="button">отправить заявку</button>
+                </form>
+            </div>
+
         </main>
 
         <footer class="footer">
@@ -152,6 +182,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="/js/optProduct.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

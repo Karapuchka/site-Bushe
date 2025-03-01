@@ -52,7 +52,8 @@ for (let i = 0; i < productLists.length; i++) {
 
 let btnContact = document.getElementById('contact-btn');
 let formContact = document.forms.contact;
-btnContact.onclick = async ()=>{
+btnContact.onclick = ()=>{
+
 
     let messError = 'Укажите:';
     let validErr = false;
