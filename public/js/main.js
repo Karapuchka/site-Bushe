@@ -108,3 +108,39 @@ linksFooter.onclick = (e)=>{
          window.location = "/404";
     }
 }
+
+function addFoodBasket(food, win){
+    win.innerHTML = '';
+
+    const p = document.createElement('p');
+    p.classList.add('search-list__item__text');
+    p.innerText = food;
+
+    const div = document.createElement('div');
+    div.classList.add('search-list__item__del');
+
+    const li = document.createElement('li');
+    li.classList.add('search-list__item');
+    li.appendChild(p);
+    li.appendChild(div);
+    
+    win.appendChild(li);
+}
+
+let btnsAddFoodInBasket = document.querySelectorAll('.product-list__main__item__info__btn');
+
+if(md.mobile() != null){
+    for (let i = 0; i < btnsAddFoodInBasket.length; i++) {
+        btnsAddFoodInBasket[i].onclick = ()=>{
+            
+            addFoodBasket(btnsAddFoodInBasket[i].dataset.food, basketWindowM);
+        }    
+    }
+} else {
+
+    for (let i = 0; i < btnsAddFoodInBasket.length; i++) {
+            btnsAddFoodInBasket[i].onclick = ()=>{
+            addFoodBasket(btnsAddFoodInBasket[i].dataset.food, basketWindowD);
+        }    
+    }
+}
