@@ -11,6 +11,15 @@
     font-family: 'Montserrat Alternates';
 }
 
+.wrapper--login{
+    align-items: center;
+    justify-content: center;    
+    width: 100dvw;
+    height: 100dvh;
+
+    background: linear-gradient(#ffeded, #FFC7A4);
+}
+
 .header--container{
     display: flex;
     align-items: center;

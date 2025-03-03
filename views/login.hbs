@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <div class="wrapper wrapper--login">
+
+        <main class="login-aside">
+
+            <form class="login-aside__form" action="/login-user" name="formLog" method="post">
+                <h3 class="login-aside__from__title">Авторизация</h3>
+                <input type="text" class="login-aside__from__input" name="login" id="login" placeholder="Введите логин">
+                <input type="password" class="login-aside__from__input" name="password" id="password" placeholder="Введите пароль">
+                <button class="login-aside__from__btn" name="btnLog" id="btn-login">Вход</button>
+                <a href="/reg" class="link-reg">Регистрация</a>
+            </form>
+            {{errorMessange}}
+
+        </main>
+
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

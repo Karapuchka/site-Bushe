@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/product.css">
-    <title>Продукция</title>
+    <title>Профиль</title>
 </head>
 <body>
     <div class="wrapper">
@@ -102,49 +102,40 @@
         </hedaer>
 
         <main class="main">
-            <div class="container-big product-content">
-                <ul class="product-menu">
-                    <li class="product-menu__item" data-active="true" id="js-btn-all">вся продукция</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-brekfast">завтраки</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-drink">напитки</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-cake">торты</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-sweet">пирожные</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-eclair">эклеры</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-puff">слойка</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-bread">хлеб</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-sandwiches">сэндвичи</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-soup">супы</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-hot-salad">горячие блюда и салаты</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-clothes">одежда</li>
-                    <li class="product-menu__item" data-active="false" id="js-btn-set">наборы</li>
-                </ul>
-                <div class="product-list">
-                    <div class="prooduct-list__header">
-                        <div class="product-list__title">
+            <div class="container-big profile__main">
+                <div class="profile__main-group">
+                    
+                    <form class="profile-form" name="profileInfo" action="/set-profile" method="post">
+                        <h2 class="profile__title">профиль</h2>
+                        <input class="profile-form__input" data-val="{{user-firstname}}" type="text" name="userFirstname" id="profile-user-firstname" placeholder="{{user-firstname}}">
+                        <input class="profile-form__input" data-val="{{user-lastname}}" type="text" name="userLastname" id="profile-user-lastname" placeholder="{{user-lastname}}">
+                        <input class="profile-form__input" data-val="{{user-login}}" type="text" name="userLogin" id="profile-user-login" placeholder="{{user-login}}">
+                        <input class="profile-form__input" data-val="{{user-password}}" type="password" name="userPassword" id="profile-user-password" placeholder="{{user-password}}">
+                        <button class="profile-form__btn" type="button" id="profile-btn-info">сохранить изменения</button>
+                    </form>
 
-                            <h2 class="product-list__title__text" id="js-product-title">вся продукция</h2>
-
-                            <span class="product-list__title__count">{{countFoods}}</span>
-                        </div>
-                        <div class="prooduct-list__filter">
-                            <select class="prooduct-list__filter__list-text" id="filter-title">
-                                <option class="prooduct-list__filter__list-text__value" value="price">цена</option>
-                                <option class="prooduct-list__filter__list-text__value" value="abc" selected>по алфавиту</option>
-                            </select>
-                            <div class="prooduct-list__filter__img" data-sort="big"><img id="filter-sort"  src="/img/product/filter.svg" class="prooduct-list__filter__img__icon"></div>
-                        </div>
-                    </div>
-                    <ul class="product-list__main">
-                        {{#each productFoods}}
-                            <li class="product-list__main__item" data-type="{{this.type}}">
-                                <div class="product-list__main__item__img"><img src="{{this.icon}}" class="product-list__main__item__img__icon"></div>
-                                <div class="product-list__main__item__info">
-                                    <h4 class="product-list__main__item__info__title">{{this.title}}</h4>
-                                    <div class="product-list__main__item__info__group">
-                                        <h4 class="product-list__main__item__info__price">{{this.price}} р.</h4>
-                                        <div class="product-list__main__item__info__btn" data-food="{{this.title}}">В корзину</div>
-                                    </div>
-                                </div>
+                     <form class="profile-form" name="listAddresses" action="/set-adress" method="post">
+                        <h2 class="profile__title">адреса</h2>
+                        <ul class="profile__list">
+                            {{#each list-address}}
+                                <li class="profile__list__item">
+                                    <input class="profile-form__input" type="text" name="user-address-{{this.id}}" id="profile-user-address-{{this.id}}" placeholder="{{this.title}}">
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <input class="profile-form__input" type="text" name="userNewAddress" id="profile-new-address" placeholder="Укажите новый адрес">
+                        <button class="profile-form__btn" type="button" name="profile-btn-address" id="profile-btn-address">добавить адрес</button>
+                    </form>
+            
+                </div>
+                <div class="profile__main-group profile__main-group--big">
+                    <h2 class="profile__title">история заказов</h2>
+                    <ul class="profile__story-list">
+                        {{#each story}}
+                            <li class="profile__story-list__item">
+                                <span class="profile__story-list__item__text">{{this.title}} |</span>
+                                <span class="profile__story-list__item__text"> дата: {{this.date}} |</span>
+                                <span class="profile__story-list__item__text"> адрес: {{this.address}}</span>
                             </li>
                         {{/each}}
                     </ul>
@@ -198,7 +189,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="/js/product.js"></script>
+    <script src="/js/profile.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="wrapper wrapper--login">
+        <main class="login-aside login-aside--big">
+            <form class="login-aside__form" name="formLog" action="/adduser" method="post">
+                <div class="logo">
+                    <span class="logo__text">Буше</span>
+                </div>
+                <h3 class="login-aside__from__title">Регистрация</h3>
+                <div class="login-aside__form__group">
+                    <label for="login">Придумайте логин:</label>
+                    <input type="text" class="login-aside__from__input login-aside__from__input--big" id="login" name="login" placeholder="Введите логин">
+                </div>
+                <div class="login-aside__form__group">
+                    <label for="password">Придумайте пароль:</label>
+                    <input type="text" class="login-aside__from__input login-aside__from__input--big" id="password" name="password" placeholder="Введите пароль">
+                </div>
+                <div class="login-aside__form__group">
+                    <label for="first-name">Укажите ваше имя:</label>
+                    <input type="text" class="login-aside__from__input login-aside__from__input--big" id="first-name" name="firstName" placeholder="Введите имя">
+                </div>
+                <div class="login-aside__form__group">
+                    <label for="last-name">Укажите вашу фамилию:</label>
+                    <input type="text" class="login-aside__from__input login-aside__from__input--big" id="last-name" name="lastName" placeholder="Введите фамилию">
+                </div>
+                <button class="login-aside__from__btn" name="btnLog" id="btn-login">Создать</button>
+                <a href="/login" class="link-reg">Авторизация</a>
+            </form>
+            {{errorMessange}}
+        </main>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>
