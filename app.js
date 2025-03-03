@@ -36,11 +36,8 @@ app.get('/', (_, res)=>{
         for (let i = 0; i < dataFood.length; i++) {
             searchFoodList.push({
                 'title': dataFood[i].title,
-<<<<<<< HEAD
             });            
-        }
-=======
-            });
+        
             
             if(+dataFood[i].sale != 0){
                 saleFoodList.push({
@@ -51,8 +48,6 @@ app.get('/', (_, res)=>{
             };
         };
 
-        
->>>>>>> e63d3de74e49c8835c3a1192c3ad8e51821a6eb4
         return res.render('index.hbs', {
             'search-list': searchFoodList,
             'slider-salve': saleFoodList,
