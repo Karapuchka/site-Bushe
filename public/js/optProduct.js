@@ -2,7 +2,6 @@ let btnContact = document.getElementById('contact-btn');
 let formContact = document.forms.contact;
 btnContact.onclick = ()=>{
 
-
     let messError = 'Укажите:';
     let validErr = false;
 

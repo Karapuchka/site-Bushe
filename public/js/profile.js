@@ -21,7 +21,6 @@ btnInfo.onclick = async ()=>{
 let btnAddress = document.getElementById('profile-btn-address');
 let addressUser = document.forms.listAddresses;
 
-
 btnAddress.onclick = async ()=>{
     let res = await fetch('/set-profile', {
         headers: {'Content-Type': 'application/json'},
